@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quer Namorar comigo?</h1>
+    <button id="yes">Sim</button>
+    <button id="no" style="position: absolute">nao</button>
+    <script>
+      const buttonYes = document.getElementById("yes");
+      const buttonNo = document.getElementById("no");
+      let res1 = false;
+      let res2 = false;
+
+      buttonYes.addEventListener("click", () => {
+        const res = window.confirm("Tem certeza?");
+        if (res) {
+          res1 = true;
+        }
+
+        if (res1) {
+          const res = window.confirm("Absoluta?");
+          res2 = true;
+        }
+
+        if (res2) {
+          alert("Aqui ta o número do hospício: (31) 98209-0000. Vá se tratar!");
+        }
+      });
+
+      buttonNo.addEventListener(
+        "mouseover",
+        () => {
+          buttonNo.style.bottom = ${Math.random() * (10 - 100) + 100}%;
+          buttonNo.style.left = ${Math.random() * (10 - 100) + 100}%;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
